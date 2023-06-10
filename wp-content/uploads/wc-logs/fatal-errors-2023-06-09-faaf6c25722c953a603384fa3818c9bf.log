@@ -1,0 +1,56 @@
+2023-06-09T09:31:09+00:00 CRITICAL Uncaught Error: Undefined constant "n" in C:\laragon\www\Core\PHP Tutorial\shopping\wp-content\themes\orchid-store\functions.php:431
+Stack trace:
+#0 C:\laragon\www\Core\PHP Tutorial\shopping\wp-includes\class-wp-hook.php(308): phandong('')
+#1 C:\laragon\www\Core\PHP Tutorial\shopping\wp-includes\class-wp-hook.php(332): WP_Hook->apply_filters('', Array)
+#2 C:\laragon\www\Core\PHP Tutorial\shopping\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#3 C:\laragon\www\Core\PHP Tutorial\shopping\wp-content\themes\orchid-store\template-parts\content.php(55): do_action('phandong_before')
+#4 C:\laragon\www\Core\PHP Tutorial\shopping\wp-includes\template.php(785): require('C:\\laragon\\www\\...')
+#5 C:\laragon\www\Core\PHP Tutorial\shopping\wp-includes\template.php(718): load_template('C:\\laragon\\www\\...', false, Array)
+#6 C:\laragon\www\Core\PHP Tutorial\shopping\wp-includes\general-template.php(204): locate_template(Array, true, false, Array)
+#7 C:\laragon\www\Core\PHP Tutorial\shopping\wp-content\themes\orchid-store\archive.php(55): get_template_part('template-parts/...', 'post')
+#8 C:\laragon\www\Core\PHP Tutorial\shopping\wp-includes\template-loader.php(106): include('C:\\laragon\\www\\...')
+#9 C:\laragon\www\Core\PHP Tutorial\shopping\wp-blog-header.php(19): require_once('C:\\laragon\\www\\...')
+#10 C:\laragon\www\Core\PHP Tutorial\shopping\index.php(17): require('C:\\laragon\\www\\...')
+#11 {main}
+  thrown in C:\laragon\www\Core\PHP Tutorial\shopping\wp-content\themes\orchid-store\functions.php on line 431
+
+2023-06-09T09:31:35+00:00 CRITICAL syntax error, unexpected fully qualified name "\n", expecting "," or ";" in C:\laragon\www\Core\PHP Tutorial\shopping\wp-content\themes\orchid-store\functions.php on line 430
+
+2023-06-09T09:31:51+00:00 CRITICAL Uncaught Error: Undefined constant "n" in C:\laragon\www\Core\PHP Tutorial\shopping\wp-content\themes\orchid-store\functions.php:430
+Stack trace:
+#0 C:\laragon\www\Core\PHP Tutorial\shopping\wp-includes\class-wp-hook.php(308): phandong('')
+#1 C:\laragon\www\Core\PHP Tutorial\shopping\wp-includes\class-wp-hook.php(332): WP_Hook->apply_filters('', Array)
+#2 C:\laragon\www\Core\PHP Tutorial\shopping\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#3 C:\laragon\www\Core\PHP Tutorial\shopping\wp-content\themes\orchid-store\template-parts\content.php(55): do_action('phandong_before')
+#4 C:\laragon\www\Core\PHP Tutorial\shopping\wp-includes\template.php(785): require('C:\\laragon\\www\\...')
+#5 C:\laragon\www\Core\PHP Tutorial\shopping\wp-includes\template.php(718): load_template('C:\\laragon\\www\\...', false, Array)
+#6 C:\laragon\www\Core\PHP Tutorial\shopping\wp-includes\general-template.php(204): locate_template(Array, true, false, Array)
+#7 C:\laragon\www\Core\PHP Tutorial\shopping\wp-content\themes\orchid-store\archive.php(55): get_template_part('template-parts/...', 'post')
+#8 C:\laragon\www\Core\PHP Tutorial\shopping\wp-includes\template-loader.php(106): include('C:\\laragon\\www\\...')
+#9 C:\laragon\www\Core\PHP Tutorial\shopping\wp-blog-header.php(19): require_once('C:\\laragon\\www\\...')
+#10 C:\laragon\www\Core\PHP Tutorial\shopping\index.php(17): require('C:\\laragon\\www\\...')
+#11 {main}
+  thrown in C:\laragon\www\Core\PHP Tutorial\shopping\wp-content\themes\orchid-store\functions.php on line 430
+
+2023-06-09T09:32:38+00:00 CRITICAL syntax error, unexpected token ";" in C:\laragon\www\Core\PHP Tutorial\shopping\wp-content\themes\orchid-store\functions.php on line 431
+
+2023-06-09T09:32:41+00:00 CRITICAL syntax error, unexpected token ";" in C:\laragon\www\Core\PHP Tutorial\shopping\wp-content\themes\orchid-store\functions.php on line 431
+
+2023-06-09T09:32:41+00:00 CRITICAL syntax error, unexpected token ";" in C:\laragon\www\Core\PHP Tutorial\shopping\wp-content\themes\orchid-store\functions.php on line 431
+
+2023-06-09T09:49:17+00:00 CRITICAL Uncaught Error: Call to undefined function str_place() in C:\laragon\www\Core\PHP Tutorial\shopping\wp-content\themes\orchid-store\functions.php:461
+Stack trace:
+#0 C:\laragon\www\Core\PHP Tutorial\shopping\wp-includes\class-wp-hook.php(308): phandong_content_filter('<h1 dir="ltr"><...')
+#1 C:\laragon\www\Core\PHP Tutorial\shopping\wp-includes\plugin.php(205): WP_Hook->apply_filters('<h1 dir="ltr"><...', Array)
+#2 C:\laragon\www\Core\PHP Tutorial\shopping\wp-includes\post-template.php(255): apply_filters('the_content', '<h1 dir="ltr"><...')
+#3 C:\laragon\www\Core\PHP Tutorial\shopping\wp-content\themes\orchid-store\template-parts\content-single.php(84): the_content()
+#4 C:\laragon\www\Core\PHP Tutorial\shopping\wp-includes\template.php(785): require('C:\\laragon\\www\\...')
+#5 C:\laragon\www\Core\PHP Tutorial\shopping\wp-includes\template.php(718): load_template('C:\\laragon\\www\\...', false, Array)
+#6 C:\laragon\www\Core\PHP Tutorial\shopping\wp-includes\general-template.php(204): locate_template(Array, true, false, Array)
+#7 C:\laragon\www\Core\PHP Tutorial\shopping\wp-content\themes\orchid-store\single.php(31): get_template_part('template-parts/...', 'single')
+#8 C:\laragon\www\Core\PHP Tutorial\shopping\wp-includes\template-loader.php(106): include('C:\\laragon\\www\\...')
+#9 C:\laragon\www\Core\PHP Tutorial\shopping\wp-blog-header.php(19): require_once('C:\\laragon\\www\\...')
+#10 C:\laragon\www\Core\PHP Tutorial\shopping\index.php(17): require('C:\\laragon\\www\\...')
+#11 {main}
+  thrown in C:\laragon\www\Core\PHP Tutorial\shopping\wp-content\themes\orchid-store\functions.php on line 461
+

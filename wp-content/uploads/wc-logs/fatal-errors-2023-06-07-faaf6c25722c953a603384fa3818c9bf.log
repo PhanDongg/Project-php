@@ -1,0 +1,83 @@
+2023-06-07T01:30:14+00:00 CRITICAL Uncaught TypeError: call_user_func_array(): Argument #1 ($callback) must be a valid callback, function "phhandong_meta_box" not found or invalid function name in C:\laragon\www\Core\PHP Tutorial\shopping\wp-includes\class-wp-hook.php:310
+Stack trace:
+#0 C:\laragon\www\Core\PHP Tutorial\shopping\wp-includes\class-wp-hook.php(332): WP_Hook->apply_filters(NULL, Array)
+#1 C:\laragon\www\Core\PHP Tutorial\shopping\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#2 C:\laragon\www\Core\PHP Tutorial\shopping\wp-admin\includes\meta-boxes.php(1701): do_action('add_meta_boxes', 'post', Object(WP_Post))
+#3 C:\laragon\www\Core\PHP Tutorial\shopping\wp-admin\edit-form-advanced.php(271): register_and_do_post_meta_boxes(Object(WP_Post))
+#4 C:\laragon\www\Core\PHP Tutorial\shopping\wp-admin\post-new.php(75): require('C:\\laragon\\www\\...')
+#5 {main}
+  thrown in C:\laragon\www\Core\PHP Tutorial\shopping\wp-includes\class-wp-hook.php on line 310
+
+2023-06-07T01:30:32+00:00 CRITICAL Uncaught TypeError: call_user_func_array(): Argument #1 ($callback) must be a valid callback, function "phhandong_meta_box" not found or invalid function name in C:\laragon\www\Core\PHP Tutorial\shopping\wp-includes\class-wp-hook.php:310
+Stack trace:
+#0 C:\laragon\www\Core\PHP Tutorial\shopping\wp-includes\class-wp-hook.php(332): WP_Hook->apply_filters(NULL, Array)
+#1 C:\laragon\www\Core\PHP Tutorial\shopping\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#2 C:\laragon\www\Core\PHP Tutorial\shopping\wp-admin\includes\meta-boxes.php(1701): do_action('add_meta_boxes', 'post', Object(WP_Post))
+#3 C:\laragon\www\Core\PHP Tutorial\shopping\wp-admin\edit-form-advanced.php(271): register_and_do_post_meta_boxes(Object(WP_Post))
+#4 C:\laragon\www\Core\PHP Tutorial\shopping\wp-admin\post-new.php(75): require('C:\\laragon\\www\\...')
+#5 {main}
+  thrown in C:\laragon\www\Core\PHP Tutorial\shopping\wp-includes\class-wp-hook.php on line 310
+
+2023-06-07T01:32:22+00:00 CRITICAL Uncaught TypeError: call_user_func_array(): Argument #1 ($callback) must be a valid callback, function "phhandong_meta_box" not found or invalid function name in C:\laragon\www\Core\PHP Tutorial\shopping\wp-includes\class-wp-hook.php:310
+Stack trace:
+#0 C:\laragon\www\Core\PHP Tutorial\shopping\wp-includes\class-wp-hook.php(332): WP_Hook->apply_filters(NULL, Array)
+#1 C:\laragon\www\Core\PHP Tutorial\shopping\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#2 C:\laragon\www\Core\PHP Tutorial\shopping\wp-admin\includes\meta-boxes.php(1701): do_action('add_meta_boxes', 'post', Object(WP_Post))
+#3 C:\laragon\www\Core\PHP Tutorial\shopping\wp-admin\edit-form-advanced.php(271): register_and_do_post_meta_boxes(Object(WP_Post))
+#4 C:\laragon\www\Core\PHP Tutorial\shopping\wp-admin\post-new.php(75): require('C:\\laragon\\www\\...')
+#5 {main}
+  thrown in C:\laragon\www\Core\PHP Tutorial\shopping\wp-includes\class-wp-hook.php on line 310
+
+2023-06-07T01:32:29+00:00 CRITICAL Uncaught TypeError: call_user_func_array(): Argument #1 ($callback) must be a valid callback, function "phhandong_meta_box" not found or invalid function name in C:\laragon\www\Core\PHP Tutorial\shopping\wp-includes\class-wp-hook.php:310
+Stack trace:
+#0 C:\laragon\www\Core\PHP Tutorial\shopping\wp-includes\class-wp-hook.php(332): WP_Hook->apply_filters(NULL, Array)
+#1 C:\laragon\www\Core\PHP Tutorial\shopping\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#2 C:\laragon\www\Core\PHP Tutorial\shopping\wp-admin\includes\meta-boxes.php(1701): do_action('add_meta_boxes', 'post', Object(WP_Post))
+#3 C:\laragon\www\Core\PHP Tutorial\shopping\wp-admin\edit-form-advanced.php(271): register_and_do_post_meta_boxes(Object(WP_Post))
+#4 C:\laragon\www\Core\PHP Tutorial\shopping\wp-admin\post-new.php(75): require('C:\\laragon\\www\\...')
+#5 {main}
+  thrown in C:\laragon\www\Core\PHP Tutorial\shopping\wp-includes\class-wp-hook.php on line 310
+
+2023-06-07T01:33:16+00:00 CRITICAL Uncaught TypeError: call_user_func_array(): Argument #1 ($callback) must be a valid callback, function "phhandong_meta_box" not found or invalid function name in C:\laragon\www\Core\PHP Tutorial\shopping\wp-includes\class-wp-hook.php:310
+Stack trace:
+#0 C:\laragon\www\Core\PHP Tutorial\shopping\wp-includes\class-wp-hook.php(332): WP_Hook->apply_filters(NULL, Array)
+#1 C:\laragon\www\Core\PHP Tutorial\shopping\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#2 C:\laragon\www\Core\PHP Tutorial\shopping\wp-admin\includes\meta-boxes.php(1701): do_action('add_meta_boxes', 'post', Object(WP_Post))
+#3 C:\laragon\www\Core\PHP Tutorial\shopping\wp-admin\edit-form-advanced.php(271): register_and_do_post_meta_boxes(Object(WP_Post))
+#4 C:\laragon\www\Core\PHP Tutorial\shopping\wp-admin\post-new.php(75): require('C:\\laragon\\www\\...')
+#5 {main}
+  thrown in C:\laragon\www\Core\PHP Tutorial\shopping\wp-includes\class-wp-hook.php on line 310
+
+2023-06-07T01:34:27+00:00 CRITICAL Uncaught TypeError: call_user_func_array(): Argument #1 ($callback) must be a valid callback, function "phhandong_meta_box" not found or invalid function name in C:\laragon\www\Core\PHP Tutorial\shopping\wp-includes\class-wp-hook.php:310
+Stack trace:
+#0 C:\laragon\www\Core\PHP Tutorial\shopping\wp-includes\class-wp-hook.php(332): WP_Hook->apply_filters(NULL, Array)
+#1 C:\laragon\www\Core\PHP Tutorial\shopping\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#2 C:\laragon\www\Core\PHP Tutorial\shopping\wp-admin\includes\meta-boxes.php(1701): do_action('add_meta_boxes', 'post', Object(WP_Post))
+#3 C:\laragon\www\Core\PHP Tutorial\shopping\wp-admin\edit-form-advanced.php(271): register_and_do_post_meta_boxes(Object(WP_Post))
+#4 C:\laragon\www\Core\PHP Tutorial\shopping\wp-admin\post-new.php(75): require('C:\\laragon\\www\\...')
+#5 {main}
+  thrown in C:\laragon\www\Core\PHP Tutorial\shopping\wp-includes\class-wp-hook.php on line 310
+
+2023-06-07T01:35:41+00:00 CRITICAL Uncaught TypeError: call_user_func(): Argument #1 ($callback) must be a valid callback, function "phandong_thongtin_output" not found or invalid function name in C:\laragon\www\Core\PHP Tutorial\shopping\wp-admin\includes\template.php:1445
+Stack trace:
+#0 C:\laragon\www\Core\PHP Tutorial\shopping\wp-admin\edit-form-advanced.php(711): do_meta_boxes(Object(WP_Screen), 'advanced', Object(WP_Post))
+#1 C:\laragon\www\Core\PHP Tutorial\shopping\wp-admin\post-new.php(75): require('C:\\laragon\\www\\...')
+#2 {main}
+  thrown in C:\laragon\www\Core\PHP Tutorial\shopping\wp-admin\includes\template.php on line 1445
+
+2023-06-07T01:54:17+00:00 CRITICAL Uncaught Error: Value of type null is not callable in C:\laragon\www\Core\PHP Tutorial\shopping\wp-content\plugins\metabox-example.php:16
+Stack trace:
+#0 C:\laragon\www\Core\PHP Tutorial\shopping\wp-admin\includes\template.php(1445): phandong_thongtin_output(Object(WP_Post), Array)
+#1 C:\laragon\www\Core\PHP Tutorial\shopping\wp-admin\edit-form-advanced.php(711): do_meta_boxes(Object(WP_Screen), 'advanced', Object(WP_Post))
+#2 C:\laragon\www\Core\PHP Tutorial\shopping\wp-admin\post.php(206): require('C:\\laragon\\www\\...')
+#3 {main}
+  thrown in C:\laragon\www\Core\PHP Tutorial\shopping\wp-content\plugins\metabox-example.php on line 16
+
+2023-06-07T01:54:40+00:00 CRITICAL Uncaught Error: Value of type null is not callable in C:\laragon\www\Core\PHP Tutorial\shopping\wp-content\plugins\metabox-example.php:16
+Stack trace:
+#0 C:\laragon\www\Core\PHP Tutorial\shopping\wp-admin\includes\template.php(1445): phandong_thongtin_output(Object(WP_Post), Array)
+#1 C:\laragon\www\Core\PHP Tutorial\shopping\wp-admin\edit-form-advanced.php(711): do_meta_boxes(Object(WP_Screen), 'advanced', Object(WP_Post))
+#2 C:\laragon\www\Core\PHP Tutorial\shopping\wp-admin\post.php(206): require('C:\\laragon\\www\\...')
+#3 {main}
+  thrown in C:\laragon\www\Core\PHP Tutorial\shopping\wp-content\plugins\metabox-example.php on line 16
+
