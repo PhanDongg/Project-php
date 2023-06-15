@@ -1,6 +1,6 @@
 <?php
 /*
-  Plugin Name: PhanDong
+  Plugin Name: PhanDong_CallPhone
   Plugin URI: https://kenh14.vn/
   Description: Plugin tạo nút gọi
   Author: David Dong
