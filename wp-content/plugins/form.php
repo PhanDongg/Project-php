@@ -39,13 +39,13 @@ function phandong_form() {
     }
     ?>
     <form method="POST" class="myForm">
-        <lable> Họ và Tên (*)</lable><br>
+        <label> Họ và Tên (*)</label><br>
         <input type="text" name="hovaten">   
-        <lable> Số Điện Thoại (*)</lable><br>
+        <label> Số Điện Thoại (*)</label><br>
         <input type="text" name="so_dien_thoai">
-        <lable> Email</lable><br>
+        <label> Email</label><br>
         <input type="text" name="email">
-        <lable> Nội dung liên hệ (*)</lable><br>
+        <label> Nội dung liên hệ (*)</label><br>
         <input type="text" name="noi_dung_lien_he">
         <input type="submit" value="register" name="gui"/>
     </form>

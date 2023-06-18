@@ -1,5 +1,4 @@
 <?php
-
 /*
   Plugin Name: WP_List_Table Class Example2
   Plugin URI: https://www.sitepoint.com/using-wp_list_table-to-create-wordpress-admin-tables/
@@ -11,14 +10,14 @@ if (!class_exists('WP_List_Table')) {
 }
 
 //tạo class con kế thừa class cha
-class Customers_List extends WP_List_Table {
+class TableDemo_List extends WP_List_Table {
 
     /** Class constructor */
     public function __construct() {
 
         parent::__construct([
-            'singular' => __('Customer', 'sp'), //singular name of the listed records//số ít
-            'plural' => __('Customers', 'sp'), //plural name of the listed records//số nhiều
+            'singular' => __('TableDemo', 'sp'), //singular name of the listed records//số ít
+            'plural' => __('TableDemos', 'sp'), //plural name of the listed records//số nhiều
             'ajax' => false //does this table support ajax?
         ]);
     }
@@ -32,11 +31,11 @@ class Customers_List extends WP_List_Table {
      * @return mixed
      */
     //lấy data từ db
-    public static function get_customers($per_page = 5, $page_number = 1) {
+    public static function get_TableDemo($per_page = 5, $page_number = 1) {
 
         global $wpdb;
 
-        $sql = "SELECT * FROM {$wpdb->prefix}customers";
+        $sql = "SELECT * FROM {$wpdb->prefix}TableDemo";
 
         if (!empty($_REQUEST['orderby'])) {
             $sql .= ' ORDER BY ' . esc_sql($_REQUEST['orderby']);
@@ -52,11 +51,11 @@ class Customers_List extends WP_List_Table {
     }
 
     //delete record từ db
-    public static function delete_customer($id) {
+    public static function delete_TableDemo($id) {
         global $wpdb;
 
         $wpdb->delete(
-                "{$wpdb->prefix}customers",
+                "{$wpdb->prefix}TableDemo",
                 ['ID' => $id],
                 ['%d']
         );
@@ -71,14 +70,14 @@ class Customers_List extends WP_List_Table {
     public static function record_count() {
         global $wpdb;
 
-        $sql = "SELECT COUNT(*) FROM {$wpdb->prefix}customers";
+        $sql = "SELECT COUNT(*) FROM {$wpdb->prefix}TableDemo";
 
         return $wpdb->get_var($sql);
     }
 
     /** Text displayed when no customer data is available */
     public function no_items() {
-        _e('No customers avaliable.', 'sp');
+        _e('No TableDemo avaliable.', 'sp');
     }
 
     /**
@@ -110,7 +109,7 @@ class Customers_List extends WP_List_Table {
         $title = '<strong>' . $item['name'] . '</strong>';
 
         $actions = [
-            'delete' => sprintf('<a href="?page=%s&action=%s&customer=%s&_wpnonce=%s">Delete</a>', esc_attr($_REQUEST['page']), 'delete', absint($item['ID']), $delete_nonce)
+            'delete' => sprintf('<a href="?page=%s&action=%s&TableDemo=%s&_wpnonce=%s">Delete</a>', esc_attr($_REQUEST['page']), 'delete', absint($item['ID']), $delete_nonce)
         ];
 
         return $title . $this->row_actions($actions);
@@ -123,7 +122,7 @@ class Customers_List extends WP_List_Table {
      */
     function get_columns() {
         $columns = [
-            'cb' => '<input type="checkbox" />',
+//            'cb' => '<input type="checkbox" />',
             'Tiêu đề' => __('TIÊU ĐỀ', 'sp'),
             'Nội dung' => __('NỘI DUNG', 'sp'),
             'Ngày bắt đầu' => __('NGÀY BẮT ĐẦU', 'sp'),
@@ -133,186 +132,183 @@ class Customers_List extends WP_List_Table {
 
         return $columns;
     }
-    
-    	/**
-	 * Columns to make sortable.//các cột để sắp xếp
-	 *
-	 * @return array
-	 */
-    	public function get_sortable_columns() {
-		$sortable_columns = array(
-			'name' => array( 'name', true ),
-			'city' => array( 'city', false )
-		);
 
-		return $sortable_columns;
-	}
-        
-        	/**
-	 * Returns an associative array containing the bulk action//Trả về một mảng kết hợp chứa hành động hàng loạt
-	 *
-	 * @return array
-	 */
+    /**
+     * Columns to make sortable.//các cột để sắp xếp
+     *
+     * @return array
+     */
+    public function get_sortable_columns() {
+        $sortable_columns = array(
+            'Tiêu đề' => array('Tiêu đề', true),
+            'Nội dung' => array('Nội dung', false),
+            'Ngày bắt đầu' => array('Ngày bắt đầu', true),
+            'Ngày kết thúc' => array('Ngày kết thúc', true),
+            'Trạng thái' => array('Trạng thái', true)
+        );
 
-        	public function get_bulk_actions() {
-		$actions = [
-			'bulk-delete' => 'Delete'
-		];
+        return $sortable_columns;
+    }
 
-		return $actions;
-	}
-        
-        	/**
-	 * Handles data query and filter, sorting, and pagination.
-	 */
-        	public function prepare_items() {
+    /**
+     * Returns an associative array containing the bulk action//Trả về một mảng kết hợp chứa hành động hàng loạt
+     *
+     * @return array
+     */
+    public function get_bulk_actions() {
+        $actions = [
+            'bulk-delete' => 'Delete'
+        ];
 
-		$this->_column_headers = $this->get_column_info();
+        return $actions;
+    }
 
-		/** Process bulk action */
-		$this->process_bulk_action();
+    /**
+     * Handles data query and filter, sorting, and pagination.
+     */
+    public function prepare_items() {
 
-		$per_page     = $this->get_items_per_page( 'customers_per_page', 5 );
-		$current_page = $this->get_pagenum();
-		$total_items  = self::record_count();
+        $this->_column_headers = $this->get_column_info();
 
-		$this->set_pagination_args( [
-			'total_items' => $total_items, //WE have to calculate the total number of items
-			'per_page'    => $per_page //WE have to determine how many items to show on a page
-		] );
+        /** Process bulk action */
+        $this->process_bulk_action();
 
-		$this->items = self::get_customers( $per_page, $current_page );
-	}
-        
-        public function process_bulk_action() {
+        $per_page = $this->get_items_per_page('customers_per_page', 5);
+        $current_page = $this->get_pagenum();
+        $total_items = self::record_count();
 
-		//Detect when a bulk action is being triggered...
-		if ( 'delete' === $this->current_action() ) {
+        $this->set_pagination_args([
+            'total_items' => $total_items, //WE have to calculate the total number of items
+            'per_page' => $per_page //WE have to determine how many items to show on a page
+        ]);
 
-			// In our file that handles the request, verify the nonce.
-			$nonce = esc_attr( $_REQUEST['_wpnonce'] );
+        $this->items = self::get_customers($per_page, $current_page);
+    }
 
-			if ( ! wp_verify_nonce( $nonce, 'sp_delete_customer' ) ) {
-				die( 'Go get a life script kiddies' );
-			}
-			else {
-				self::delete_customer( absint( $_GET['customer'] ) );
+    public function process_bulk_action() {
 
-		                // esc_url_raw() is used to prevent converting ampersand in url to "#038;"
-		                // add_query_arg() return the current url
-		                wp_redirect( esc_url_raw(add_query_arg()) );
-				exit;
-			}
+        //Detect when a bulk action is being triggered...
+        if ('delete' === $this->current_action()) {
 
-		}
+            // In our file that handles the request, verify the nonce.
+            $nonce = esc_attr($_REQUEST['_wpnonce']);
 
-		// If the delete bulk action is triggered
-		if ( ( isset( $_POST['action'] ) && $_POST['action'] == 'bulk-delete' )
-		     || ( isset( $_POST['action2'] ) && $_POST['action2'] == 'bulk-delete' )
-		) {
+            if (!wp_verify_nonce($nonce, 'sp_delete_customer')) {
+                die('Go get a life script kiddies');
+            } else {
+                self::delete_TableDemo(absint($_GET['TableDemo']));
 
-			$delete_ids = esc_sql( $_POST['bulk-delete'] );
-
-			// loop over the array of record IDs and delete them
-			foreach ( $delete_ids as $id ) {
-				self::delete_customer( $id );
-
-			}
-
-			// esc_url_raw() is used to prevent converting ampersand in url to "#038;"
-		        // add_query_arg() return the current url
-		        wp_redirect( esc_url_raw(add_query_arg()) );
-			exit;
-		}
+                // esc_url_raw() is used to prevent converting ampersand in url to "#038;"
+                // add_query_arg() return the current url
+                wp_redirect(esc_url_raw(add_query_arg()));
+                exit;
+            }
         }
+
+        // If the delete bulk action is triggered
+        if (( isset($_POST['action']) && $_POST['action'] == 'bulk-delete' ) || ( isset($_POST['action2']) && $_POST['action2'] == 'bulk-delete' )
+        ) {
+
+            $delete_ids = esc_sql($_POST['bulk-delete']);
+
+            // loop over the array of record IDs and delete them
+            foreach ($delete_ids as $id) {
+                self::delete_TableDemo($id);
+            }
+
+            // esc_url_raw() is used to prevent converting ampersand in url to "#038;"
+            // add_query_arg() return the current url
+            wp_redirect(esc_url_raw(add_query_arg()));
+            exit;
+        }
+    }
+
 }
 
 //xây dựng trang cài đặt
 class SP_Plugin {
-    	// class instance
-	static $instance;
 
-	// customer WP_List_Table object
-	public $customers_obj;
+    // class instance
+    static $instance;
+    // customer WP_List_Table object
+    public $customers_obj;
 
-	// class constructor
-	public function __construct() {
-		add_filter( 'set_screen_option', [ __CLASS__, 'set_screen' ], 10, 3 );
-		add_action( 'admin_menu', [ $this, 'plugin_menu' ] );
-	}
+    // class constructor
+    public function __construct() {
+        add_filter('set_screen_option', [__CLASS__, 'set_screen'], 10, 3);
+        add_action('admin_menu', [$this, 'plugin_menu']);
+    }
 
+    public static function set_screen($status, $option, $value) {
+        return $value;
+    }
 
-	public static function set_screen( $status, $option, $value ) {
-		return $value;
-	}
+    public function plugin_menu() {
 
-	public function plugin_menu() {
+        $hook = add_menu_page(
+                'Sitepoint WP_List_Table Example',
+                'SP WP_List_Table',
+                'manage_options',
+                'wp_list_table_class',
+                [$this, 'plugin_settings_page']
+        );
 
-		$hook = add_menu_page(
-			'Sitepoint WP_List_Table Example',
-			'SP WP_List_Table',
-			'manage_options',
-			'wp_list_table_class',
-			[ $this, 'plugin_settings_page' ]
-		);
+        add_action("load-$hook", [$this, 'screen_option']);
+    }
 
-		add_action( "load-$hook", [ $this, 'screen_option' ] );
+    /**
+     * Plugin settings page
+     */
+    public function plugin_settings_page() {
+        ?>
+        <div class="wrap">
+            <h2>Quản Lí Thông Báo</h2>
 
-	}
+            <div id="poststuff">
+                <div id="post-body" class="metabox-holder columns-2">
+                    <div id="post-body-content">
+                        <div class="meta-box-sortables ui-sortable">
+                            <form method="post">
+        <?php
+        $this->customers_obj->prepare_items();
+        $this->customers_obj->display();
+        ?>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <br class="clear">
+            </div>
+        </div>
+        <?php
+    }
 
+    /**
+     * Screen options
+     */
+    public function screen_option() {
 
-	/**
-	 * Plugin settings page
-	 */
-	public function plugin_settings_page() {
-		?>
-		<div class="wrap">
-			<h2>Quản Lí Thông Báo</h2>
+        $option = 'per_page';
+        $args = [
+            'label' => 'TableDemo',
+            'default' => 5,
+            'option' => 'customers_per_page'
+        ];
 
-			<div id="poststuff">
-				<div id="post-body" class="metabox-holder columns-2">
-					<div id="post-body-content">
-						<div class="meta-box-sortables ui-sortable">
-							<form method="post">
-								<?php
-								$this->customers_obj->prepare_items();
-								$this->customers_obj->display(); ?>
-							</form>
-						</div>
-					</div>
-				</div>
-				<br class="clear">
-			</div>
-		</div>
-	<?php
-	}
+        add_screen_option($option, $args);
 
-	/**
-	 * Screen options
-	 */
-	public function screen_option() {
+        $this->customers_obj = new TableDemo_List();
+    }
 
-		$option = 'per_page';
-		$args   = [
-			'label'   => 'Customers',
-			'default' => 5,
-			'option'  => 'customers_per_page'
-		];
+    /** Singleton instance */
+    public static function get_instance() {
+        if (!isset(self::$instance)) {
+            self::$instance = new self();
+        }
 
-		add_screen_option( $option, $args );
+        return self::$instance;
+    }
 
-		$this->customers_obj = new Customers_List();
-	}
-
-
-	/** Singleton instance */
-	public static function get_instance() {
-		if ( ! isset( self::$instance ) ) {
-			self::$instance = new self();
-		}
-
-		return self::$instance;
-	}
 }
 
 //hook action để móc

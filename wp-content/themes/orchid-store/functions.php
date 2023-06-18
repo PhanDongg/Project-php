@@ -424,6 +424,7 @@ require get_template_directory() . '/vendor/autoload.php';
 
 
 
+//ADD CODE CỦA MR.ĐÔNG
 
 /*
  * học action hook
@@ -466,3 +467,5 @@ function phandong_content_filter( $content ) {
 
 add_filter('the_content', 'phandong_content_filter' );
 
+//tạo bảng cho database
+?>
