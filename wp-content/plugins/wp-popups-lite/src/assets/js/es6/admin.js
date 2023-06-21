@@ -1,5 +1,4 @@
 /* global wp, _, wppopups_admin, jconfirm, wpCookies, Choices, List */
-
 ;(function($) {
 
 	'use strict';

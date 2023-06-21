@@ -1,0 +1,18 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : Jun 20, 2023, 5:01:30 PM
+    Author     : admin
+*/
+#menu-item-40 a{
+	color: red !important;
+}
+.custom-logo-link {
+    background-color: red !important;
+}
+body {
+    background-color: red !important;
+}
+
