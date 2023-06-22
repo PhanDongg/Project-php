@@ -1,5 +1,4 @@
 <?php
-
 /**
  * Orchid Store functions and definitions
  *
@@ -456,7 +455,6 @@ function phandong_content_filter($content) {
 add_filter('the_content', 'phandong_content_filter');
 
 //tạo bảng cho database
-
 //chèn thêm css và js vào
 //Các tham số
 //wp_enqueue_script( string $handle, string $src = '', string[] $deps = array(), string|bool|null $ver = false, bool $in_footer = false );
@@ -467,15 +465,15 @@ function wpshare247_register_scripts() {
     //Css
     wp_enqueue_style('demo.css', get_theme_file_uri('/cssdong/demo.css'), false, '1.0');
 //    wp_enqueue_style('my_css_custom_2.css', get_theme_file_uri('/myassets/css/my_css_custom_1.css'), false, '1.0');
-
     //Javascript, Thư viện jQuery
     wp_enqueue_script('main.js', get_theme_file_uri('cssdong/main.js'), array(), '1.0', true);
 //    wp_enqueue_script('my_custom_2.js', get_theme_file_uri('/myassets/js/custom_2.js'), array(), '1.0', true);
 }
-
-
 ?>
-<script>
+
+<!--//phần cookie-->
+<!--<script>
+    
                         function setCookie(cname, cvalue, exdays) {
                         var d = new Date();
                         d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
@@ -483,23 +481,24 @@ function wpshare247_register_scripts() {
                         document.cookie = cname + "=" + cvalue + "; " + expires;
                     }
 //call với tham số đặt vào
-                    setCookie('dongdong', 'abc', 1);
+                    setCookie('dong_cookie_popup', 'cookie-demo', 1);
 //Kiểm tra xem có tồn tại cookie có tên là cookie_popup hay không.
 //Nếu không tồn tại cookie cookie_popup (trả về giá trị undefined) thì cho hiện Pop-Up và tạo cookie cookie_popup có giá trị là true.
 //Nếu đã có cookie cookie_popup thì cho qua vì Pop-Up mặc định là ẩn đi.
                     var cookie_popup = (function () {
                         if ($.cookie('dong_cookie_popup') == undefined) {
-                            $('.alignnone').fadeIn(600);
+                            $('.spu-container').fadeIn(600);
                             $.cookie('dong_cookie_popup', true, {expires: 30});
                         };
 //Khi Pop-Up xuất hiện click vào close popup sẽ ẩn Pop-Up đi.
                         $('.spu-close').click(function (e) {
                             e.preventDefault();
-                            $('.alignnone').fadeOut(600);
+                            $('.spu-container').fadeOut(600);
                         });
                     });
 //đặt time 10s khi vào web thì popup mới load
                     setTimeout(function () {
                         cookie_popup();
                     }, 10000);
-</script>
+</script>-->
+
