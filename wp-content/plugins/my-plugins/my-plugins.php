@@ -96,6 +96,7 @@ function wpl_owt_list_table_fn() {
         $template = ob_get_contents();
 
         ob_end_clean();
+        
         echo $template;
     }
 }
