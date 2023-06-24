@@ -1,57 +1,4 @@
-<?php
-/*
-  Plugin Name: PhanDong_CallPhone
-  Plugin URI: https://kenh14.vn/
-  Description: Plugin tạo nút gọi
-  Author: David Dong
-  Version: 1.0
-  Author URI: facebook.com/phan.dong.144
- */
-add_action("admin_menu", "phandong_show_setting_page");
 
-function phandong_show_setting_page() {
-    add_menu_page(
-            "Nút Gọi",
-            "Nút Gọi",
-            "manage_options",
-            "nut-goi",
-            "phandong_setting_page",
-            '',
-            5
-            );
-}
-
-//
-function phandong_setting_page() {
-    
-    if(isset( $_POST["so_dien_thoai"] ) ) {
-        update_option("so_dien_thoai", $_POST["so_dien_thoai"]);
-    }
-    $so_dien_thoai = get_option("so_dien_thoai");
-    
-    ?>
-<h2>cấu hình nút gọi</h2>
-<form method="POST">
-    <input type="text" name="so_dien_thoai" value="<?php echo  $so_dien_thoai ?>"/>
-    <input type="submit" value="save"/>   
-</form>
-    <?php
-}
-
-add_action("wp_footer", "phandong_nut_goi");
-
-function phandong_nut_goi() {
-    $so_dien_thoai = get_option("so_dien_thoai");
-    ?>
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-
-    <a id="alo-phoneIcon" href="https://mbongda88.vip/" data-toggle="modal" data-target="#callme-modal" class="alo-phone alo-green alo-show">
-        <div class="alo-ph-circle"></div>
-        <div class="alo-ph-circle-fill"></div>
-        <div class="alo-ph-img-circle"><i class="fa fa-phone"></i></div>
-        <span class="alo-ph-text"> <?php echo $so_dien_thoai; ?> </span>
-    </a>
-    <style>
         .alo-phone {
             background-color: transparent;
             cursor: pointer;
@@ -576,7 +523,3 @@ function phandong_nut_goi() {
             }
         }
 
-    </style>
-
-    <?php
-}

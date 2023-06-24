@@ -1,0 +1,96 @@
+2023-06-23T15:03:47+00:00 CRITICAL Uncaught TypeError: call_user_func_array(): Argument #1 ($callback) must be a valid callback, no array or string given in C:\laragon\www\Core\PHP Tutorial\shopping\wp-includes\class-wp-hook.php:308
+Stack trace:
+#0 C:\laragon\www\Core\PHP Tutorial\shopping\wp-includes\class-wp-hook.php(332): WP_Hook->apply_filters(NULL, Array)
+#1 C:\laragon\www\Core\PHP Tutorial\shopping\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#2 C:\laragon\www\Core\PHP Tutorial\shopping\wp-includes\general-template.php(3065): do_action('wp_footer')
+#3 C:\laragon\www\Core\PHP Tutorial\shopping\wp-content\themes\orchid-store\footer.php(192): wp_footer()
+#4 C:\laragon\www\Core\PHP Tutorial\shopping\wp-includes\template.php(783): require_once('C:\\laragon\\www\\...')
+#5 C:\laragon\www\Core\PHP Tutorial\shopping\wp-includes\template.php(718): load_template('C:\\laragon\\www\\...', true, Array)
+#6 C:\laragon\www\Core\PHP Tutorial\shopping\wp-includes\general-template.php(92): locate_template(Array, true, true, Array)
+#7 C:\laragon\www\Core\PHP Tutorial\shopping\wp-content\themes\orchid-store\page.php(62): get_footer()
+#8 C:\laragon\www\Core\PHP Tutorial\shopping\wp-includes\template-loader.php(106): include('C:\\laragon\\www\\...')
+#9 C:\laragon\www\Core\PHP Tutorial\shopping\wp-blog-header.php(19): require_once('C:\\laragon\\www\\...')
+#10 C:\laragon\www\Core\PHP Tutorial\shopping\index.php(17): require('C:\\laragon\\www\\...')
+#11 {main}
+  thrown in C:\laragon\www\Core\PHP Tutorial\shopping\wp-includes\class-wp-hook.php on line 308
+
+2023-06-23T15:04:26+00:00 CRITICAL Uncaught TypeError: call_user_func_array(): Argument #1 ($callback) must be a valid callback, no array or string given in C:\laragon\www\Core\PHP Tutorial\shopping\wp-includes\class-wp-hook.php:308
+Stack trace:
+#0 C:\laragon\www\Core\PHP Tutorial\shopping\wp-includes\class-wp-hook.php(332): WP_Hook->apply_filters(NULL, Array)
+#1 C:\laragon\www\Core\PHP Tutorial\shopping\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#2 C:\laragon\www\Core\PHP Tutorial\shopping\wp-includes\general-template.php(3065): do_action('wp_footer')
+#3 C:\laragon\www\Core\PHP Tutorial\shopping\wp-content\themes\orchid-store\footer.php(192): wp_footer()
+#4 C:\laragon\www\Core\PHP Tutorial\shopping\wp-includes\template.php(783): require_once('C:\\laragon\\www\\...')
+#5 C:\laragon\www\Core\PHP Tutorial\shopping\wp-includes\template.php(718): load_template('C:\\laragon\\www\\...', true, Array)
+#6 C:\laragon\www\Core\PHP Tutorial\shopping\wp-includes\general-template.php(92): locate_template(Array, true, true, Array)
+#7 C:\laragon\www\Core\PHP Tutorial\shopping\wp-content\themes\orchid-store\page.php(62): get_footer()
+#8 C:\laragon\www\Core\PHP Tutorial\shopping\wp-includes\template-loader.php(106): include('C:\\laragon\\www\\...')
+#9 C:\laragon\www\Core\PHP Tutorial\shopping\wp-blog-header.php(19): require_once('C:\\laragon\\www\\...')
+#10 C:\laragon\www\Core\PHP Tutorial\shopping\index.php(17): require('C:\\laragon\\www\\...')
+#11 {main}
+  thrown in C:\laragon\www\Core\PHP Tutorial\shopping\wp-includes\class-wp-hook.php on line 308
+
+2023-06-23T15:04:54+00:00 CRITICAL Uncaught TypeError: call_user_func_array(): Argument #1 ($callback) must be a valid callback, no array or string given in C:\laragon\www\Core\PHP Tutorial\shopping\wp-includes\class-wp-hook.php:308
+Stack trace:
+#0 C:\laragon\www\Core\PHP Tutorial\shopping\wp-includes\class-wp-hook.php(332): WP_Hook->apply_filters(NULL, Array)
+#1 C:\laragon\www\Core\PHP Tutorial\shopping\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#2 C:\laragon\www\Core\PHP Tutorial\shopping\wp-includes\general-template.php(3065): do_action('wp_footer')
+#3 C:\laragon\www\Core\PHP Tutorial\shopping\wp-content\themes\orchid-store\footer.php(191): wp_footer()
+#4 C:\laragon\www\Core\PHP Tutorial\shopping\wp-includes\template.php(783): require_once('C:\\laragon\\www\\...')
+#5 C:\laragon\www\Core\PHP Tutorial\shopping\wp-includes\template.php(718): load_template('C:\\laragon\\www\\...', true, Array)
+#6 C:\laragon\www\Core\PHP Tutorial\shopping\wp-includes\general-template.php(92): locate_template(Array, true, true, Array)
+#7 C:\laragon\www\Core\PHP Tutorial\shopping\wp-content\themes\orchid-store\page.php(62): get_footer()
+#8 C:\laragon\www\Core\PHP Tutorial\shopping\wp-includes\template-loader.php(106): include('C:\\laragon\\www\\...')
+#9 C:\laragon\www\Core\PHP Tutorial\shopping\wp-blog-header.php(19): require_once('C:\\laragon\\www\\...')
+#10 C:\laragon\www\Core\PHP Tutorial\shopping\index.php(17): require('C:\\laragon\\www\\...')
+#11 {main}
+  thrown in C:\laragon\www\Core\PHP Tutorial\shopping\wp-includes\class-wp-hook.php on line 308
+
+2023-06-23T15:07:20+00:00 CRITICAL Uncaught TypeError: call_user_func_array(): Argument #1 ($callback) must be a valid callback, no array or string given in C:\laragon\www\Core\PHP Tutorial\shopping\wp-includes\class-wp-hook.php:308
+Stack trace:
+#0 C:\laragon\www\Core\PHP Tutorial\shopping\wp-includes\class-wp-hook.php(332): WP_Hook->apply_filters(NULL, Array)
+#1 C:\laragon\www\Core\PHP Tutorial\shopping\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#2 C:\laragon\www\Core\PHP Tutorial\shopping\wp-includes\general-template.php(3065): do_action('wp_footer')
+#3 C:\laragon\www\Core\PHP Tutorial\shopping\wp-content\themes\orchid-store\footer.php(192): wp_footer()
+#4 C:\laragon\www\Core\PHP Tutorial\shopping\wp-includes\template.php(783): require_once('C:\\laragon\\www\\...')
+#5 C:\laragon\www\Core\PHP Tutorial\shopping\wp-includes\template.php(718): load_template('C:\\laragon\\www\\...', true, Array)
+#6 C:\laragon\www\Core\PHP Tutorial\shopping\wp-includes\general-template.php(92): locate_template(Array, true, true, Array)
+#7 C:\laragon\www\Core\PHP Tutorial\shopping\wp-content\themes\orchid-store\page.php(62): get_footer()
+#8 C:\laragon\www\Core\PHP Tutorial\shopping\wp-includes\template-loader.php(106): include('C:\\laragon\\www\\...')
+#9 C:\laragon\www\Core\PHP Tutorial\shopping\wp-blog-header.php(19): require_once('C:\\laragon\\www\\...')
+#10 C:\laragon\www\Core\PHP Tutorial\shopping\index.php(17): require('C:\\laragon\\www\\...')
+#11 {main}
+  thrown in C:\laragon\www\Core\PHP Tutorial\shopping\wp-includes\class-wp-hook.php on line 308
+
+2023-06-23T15:10:14+00:00 CRITICAL Uncaught TypeError: call_user_func_array(): Argument #1 ($callback) must be a valid callback, no array or string given in C:\laragon\www\Core\PHP Tutorial\shopping\wp-includes\class-wp-hook.php:308
+Stack trace:
+#0 C:\laragon\www\Core\PHP Tutorial\shopping\wp-includes\class-wp-hook.php(332): WP_Hook->apply_filters(NULL, Array)
+#1 C:\laragon\www\Core\PHP Tutorial\shopping\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#2 C:\laragon\www\Core\PHP Tutorial\shopping\wp-includes\general-template.php(3065): do_action('wp_footer')
+#3 C:\laragon\www\Core\PHP Tutorial\shopping\wp-content\themes\orchid-store\footer.php(192): wp_footer()
+#4 C:\laragon\www\Core\PHP Tutorial\shopping\wp-includes\template.php(783): require_once('C:\\laragon\\www\\...')
+#5 C:\laragon\www\Core\PHP Tutorial\shopping\wp-includes\template.php(718): load_template('C:\\laragon\\www\\...', true, Array)
+#6 C:\laragon\www\Core\PHP Tutorial\shopping\wp-includes\general-template.php(92): locate_template(Array, true, true, Array)
+#7 C:\laragon\www\Core\PHP Tutorial\shopping\wp-content\themes\orchid-store\page.php(62): get_footer()
+#8 C:\laragon\www\Core\PHP Tutorial\shopping\wp-includes\template-loader.php(106): include('C:\\laragon\\www\\...')
+#9 C:\laragon\www\Core\PHP Tutorial\shopping\wp-blog-header.php(19): require_once('C:\\laragon\\www\\...')
+#10 C:\laragon\www\Core\PHP Tutorial\shopping\index.php(17): require('C:\\laragon\\www\\...')
+#11 {main}
+  thrown in C:\laragon\www\Core\PHP Tutorial\shopping\wp-includes\class-wp-hook.php on line 308
+
+2023-06-23T15:10:29+00:00 CRITICAL Uncaught TypeError: call_user_func_array(): Argument #1 ($callback) must be a valid callback, no array or string given in C:\laragon\www\Core\PHP Tutorial\shopping\wp-includes\class-wp-hook.php:308
+Stack trace:
+#0 C:\laragon\www\Core\PHP Tutorial\shopping\wp-includes\class-wp-hook.php(332): WP_Hook->apply_filters(NULL, Array)
+#1 C:\laragon\www\Core\PHP Tutorial\shopping\wp-includes\plugin.php(517): WP_Hook->do_action(Array)
+#2 C:\laragon\www\Core\PHP Tutorial\shopping\wp-includes\general-template.php(3065): do_action('wp_footer')
+#3 C:\laragon\www\Core\PHP Tutorial\shopping\wp-content\themes\orchid-store\footer.php(192): wp_footer()
+#4 C:\laragon\www\Core\PHP Tutorial\shopping\wp-includes\template.php(783): require_once('C:\\laragon\\www\\...')
+#5 C:\laragon\www\Core\PHP Tutorial\shopping\wp-includes\template.php(718): load_template('C:\\laragon\\www\\...', true, Array)
+#6 C:\laragon\www\Core\PHP Tutorial\shopping\wp-includes\general-template.php(92): locate_template(Array, true, true, Array)
+#7 C:\laragon\www\Core\PHP Tutorial\shopping\wp-content\themes\orchid-store\page.php(62): get_footer()
+#8 C:\laragon\www\Core\PHP Tutorial\shopping\wp-includes\template-loader.php(106): include('C:\\laragon\\www\\...')
+#9 C:\laragon\www\Core\PHP Tutorial\shopping\wp-blog-header.php(19): require_once('C:\\laragon\\www\\...')
+#10 C:\laragon\www\Core\PHP Tutorial\shopping\index.php(17): require('C:\\laragon\\www\\...')
+#11 {main}
+  thrown in C:\laragon\www\Core\PHP Tutorial\shopping\wp-includes\class-wp-hook.php on line 308
+
