@@ -17,7 +17,7 @@ class OWTTableList extends WP_List_Table {
         $datas = $this->wp_list_table_data($orderby, $order, $search_term);
 
         //phân trang
-        $per_page = 10;
+        $per_page = 3;
         $current_page = $this->get_pagenum();
         $total_items = count($datas);
 
