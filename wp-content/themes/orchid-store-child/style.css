@@ -1,0 +1,12 @@
+/*
+Theme Name: orchid-store-child
+Author: David Dong
+Template: orchid-store
+*/
+
+@import url("../orchid-store/style.css");
+#menu-item-40 a {
+   background-color: red;
+}
+
+
